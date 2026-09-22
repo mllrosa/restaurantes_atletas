@@ -21,15 +21,15 @@ CREATE TABLE EQUIPE (
 
 
 CREATE TABLE ATLETAS (
-    atl_CPF CHAR(11),
-    atl_nome VARCHAR(60),
-    atl_contato CHAR(11),
-    atl_email VARCHAR(60),
-    atl_dt_nasc DATE,
-    atl_sexo VARCHAR(9),
-    atl_limit_fisica VARCHAR(120),
-    equ_codigo INTEGER,
-    esp_codigo INTEGER,
+    atl_CPF CHAR(11) NOT NULL,
+    atl_nome VARCHAR(60) NOT NULL,
+    atl_contato CHAR(11) NOT NULL,
+    atl_email VARCHAR(60) NOT NULL,
+    atl_dt_nasc DATE NOT NULL,
+    atl_sexo VARCHAR(9) NOT NULL,
+    atl_limit_fisica VARCHAR(120) NOT NULL,
+    equ_codigo INTEGER NOT NULL,
+    esp_codigo INTEGER NOT NULL,
 
     PRIMARY KEY (atl_CPF),
     FOREIGN KEY (equ_codigo) REFERENCES EQUIPE(equ_codigo),
